@@ -651,6 +651,7 @@ h2.title {
     position: relative;
     top: 0;
     height: 100vh;
+    background-color: #282828;
 }
 
 .sidebar,
@@ -771,6 +772,7 @@ h2.title {
     display: block;
     top: 0;
     left: 0;
+    background-color: #212121;
     background-size: cover;
     background-position: center center;
 }

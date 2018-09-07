@@ -53,8 +53,8 @@ const Sidebar = ({ ...props }) => {
                 {typeof prop.icon === "string" ? (
                   <Icon>{prop.icon}</Icon>
                 ) : (
-                  <prop.icon />
-                )}
+                    <prop.icon />
+                  )}
               </ListItemIcon>
               <ListItemText
                 primary={prop.sidebarName}
@@ -69,12 +69,12 @@ const Sidebar = ({ ...props }) => {
   );
   var brand = (
     <div className={classes.logo}>
-      <a href="https://www.creative-tim.com" className={classes.logoLink}>
+      {/*<a href="https://www.creative-tim.com" className={classes.logoLink}>
         <div className={classes.logoImage}>
           <img src={logo} alt="logo" className={classes.img} />
-        </div>
-        {logoText}
-      </a>
+  </div>*/}
+      {logoText}
+      {/* </a>*/}
     </div>
   );
   return (

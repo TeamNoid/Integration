@@ -18,7 +18,14 @@ function Icons(props) {
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card plain>
-          <CardHeader plain color="primary">
+          <CardHeader color="info">
+            <h4 className={classes.cardTitleWhite}>Visualizers</h4>
+            <p className={classes.cardCategoryWhite}>
+
+            </p>
+          </CardHeader>
+          <p><b>The visualizer gives a pictorial perspective of how transactions are being routed through this middleware.</b></p>
+          {/*<CardHeader plain color="primary">
             <h4 className={classes.cardTitleWhite}>Material Design Icons</h4>
             <p className={classes.cardCategoryWhite}>
               Handcrafted by our friends from{" "}
@@ -57,7 +64,7 @@ function Icons(props) {
                 </h5>
               </GridItem>
             </Hidden>
-          </CardBody>
+  </CardBody>*/}
         </Card>
       </GridItem>
     </GridContainer>

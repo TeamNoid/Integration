@@ -25,41 +25,42 @@ const dashboardRoutes = [
     icon: Dashboard,
     component: DashboardPage
   },
-  {
+  /*{
     path: "/user",
     sidebarName: "User Profile",
     navbarName: "Profile",
     icon: Person,
     component: UserProfile
-  },
+  },*/
   {
     path: "/table",
-    sidebarName: "Table List",
-    navbarName: "Table List",
+    sidebarName: "Transaction Logs",
+    navbarName: "Transaction Logs",
     icon: "content_paste",
     component: TableList
   },
   {
-    path: "/typography",
-    sidebarName: "Typography",
-    navbarName: "Typography",
-    icon: LibraryBooks,
-    component: Typography
+    path: "/icons",
+    sidebarName: "Visualizer",
+    navbarName: "Visualizer",
+    icon: BubbleChart,
+    component: Icons
   },
-  {
+
+  /*{
     path: "/icons",
     sidebarName: "Icons",
     navbarName: "Icons",
     icon: BubbleChart,
     component: Icons
   },
-  {
+  /*{
     path: "/maps",
     sidebarName: "Maps",
     navbarName: "Map",
     icon: LocationOn,
     component: Maps
-  },
+  },*/
   {
     path: "/notifications",
     sidebarName: "Notifications",
@@ -67,13 +68,14 @@ const dashboardRoutes = [
     icon: Notifications,
     component: NotificationsPage
   },
+  /*
   {
     path: "/upgrade-to-pro",
     sidebarName: "Upgrade To PRO",
     navbarName: "Upgrade To PRO",
     icon: Unarchive,
     component: UpgradeToPro
-  },
+  },*/
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];
 

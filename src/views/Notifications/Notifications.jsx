@@ -71,7 +71,7 @@ class Notifications extends React.Component {
     this.setState(x);
     this.clearAlertTimeout();
     this.alertTimeout = setTimeout(
-      function() {
+      function () {
         x[place] = false;
         this.setState(x);
       }.bind(this),
@@ -82,9 +82,9 @@ class Notifications extends React.Component {
     const { classes } = this.props;
     return (
       <Card>
-        <CardHeader color="primary">
+        <CardHeader color="info">
           <h4 className={classes.cardTitleWhite}>Notifications</h4>
-          <p className={classes.cardCategoryWhite}>
+          { /* <p className={classes.cardCategoryWhite}>
             Handcrafted by our friends from{" "}
             <a target="_blank" href="https://material-ui-next.com/">
               Material UI
@@ -96,7 +96,7 @@ class Notifications extends React.Component {
             <a href="#pablo" target="_blank">
               full documentation
             </a>.
-          </p>
+    </p>*/}
         </CardHeader>
         <CardBody>
           <GridContainer>
