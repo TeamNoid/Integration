@@ -47,9 +47,7 @@ function TableList(props) {
         <Card>
           <CardHeader color="info">
             <h4 className={classes.cardTitleWhite}>Transaction Table</h4>
-            <p className={classes.cardCategoryWhite}>
-
-            </p>
+            <p className={classes.cardCategoryWhite}> </p>
           </CardHeader>
           <CardBody>
             <Table
