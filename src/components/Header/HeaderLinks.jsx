@@ -70,7 +70,7 @@ class HeaderLinks extends React.Component {
           </Hidden>
         </Button>
         <div className={classes.manager}>
-          <Button
+          {/*<Button
             buttonRef={node => {
               this.anchorEl = node;
             }}
@@ -89,7 +89,7 @@ class HeaderLinks extends React.Component {
                 Notification
               </p>
             </Hidden>
-          </Button>
+          </Button>*/}
           <Poppers
             open={open}
             anchorEl={this.anchorEl}
