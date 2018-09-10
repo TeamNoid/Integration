@@ -17,6 +17,7 @@ function Icons(props) {
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
+        <p>The visualizer gives a pictorial perspective of how transactions are being routed through this middleware.</p>
         <Card plain>
           <CardHeader color="info">
             <h4 className={classes.cardTitleWhite}>Visualizers</h4>
@@ -24,7 +25,7 @@ function Icons(props) {
 
             </p>
           </CardHeader>
-          <p><b>The visualizer gives a pictorial perspective of how transactions are being routed through this middleware.</b></p>
+
           {/*<CardHeader plain color="primary">
             <h4 className={classes.cardTitleWhite}>Material Design Icons</h4>
             <p className={classes.cardCategoryWhite}>
@@ -65,8 +66,47 @@ function Icons(props) {
               </GridItem>
             </Hidden>
   </CardBody>*/}
+
         </Card>
+        <div>
+          <GridItem xs={3} sm={3} md={3}>
+            <Card plain >
+              <CardHeader color="success">
+                <h4 className={classes.cardTitleWhite}>Facility Check</h4>
+                <p className={classes.cardCategoryWhite}></p>
+              </CardHeader>
+
+            </Card>
+
+          </GridItem>
+        </div>
+
+        <GridItem xs={3} sm={3} md={3}>
+          <Card plain >
+            <CardHeader color="success">
+              <h4 className={classes.cardTitleWhite}>Registration</h4>
+            </CardHeader>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={3} sm={3} md={3}>
+          <Card plain >
+            <CardHeader color="success">
+              <h4 className={classes.cardTitleWhite}>Subscription</h4>
+            </CardHeader>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={3} sm={3} md={3}>
+          <Card plain >
+            <CardHeader color="success">
+              <h4 className={classes.cardTitleWhite}>Help Desk</h4>
+            </CardHeader>
+          </Card>
+        </GridItem>
+
       </GridItem>
+
     </GridContainer>
   );
 }

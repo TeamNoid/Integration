@@ -48,7 +48,7 @@ function TableList(props) {
           <CardHeader color="info">
             <h4 className={classes.cardTitleWhite}>Transaction Table</h4>
             <p className={classes.cardCategoryWhite}>
-
+              This is where the record of transactions are kept.
             </p>
           </CardHeader>
           <CardBody>

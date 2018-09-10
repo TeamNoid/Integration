@@ -47,6 +47,9 @@ const dashboardRoutes = [
     component: Icons
   },
 
+
+
+
   /*{
     path: "/icons",
     sidebarName: "Icons",
