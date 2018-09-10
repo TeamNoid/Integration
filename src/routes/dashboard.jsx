@@ -41,7 +41,6 @@ const dashboardRoutes = [
     icon: BubbleChart,
     component: Icons
   },
-
   {
     path: "/notifications",
     sidebarName: "Users",
