@@ -1,6 +1,6 @@
 import {
-  primaryColor,
-  primaryBoxShadow,
+  infoColor,
+  infoBoxShadow,
   defaultFont
 } from "assets/jss/material-dashboard-react.jsx";
 
@@ -109,9 +109,9 @@ const dropdownStyle = theme => ({
     whiteSpace: "nowrap",
     height: "unset",
     "&:hover": {
-      backgroundColor: primaryColor,
+      backgroundColor: infoColor,
       color: "#FFFFFF",
-      ...primaryBoxShadow
+      ...infoBoxShadow
     }
   }
 });

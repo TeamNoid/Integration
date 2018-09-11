@@ -57,7 +57,7 @@ class HeaderLinks extends React.Component {
             <Search />
           </Button>
         </div>
-        <Button
+       {/* <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
@@ -68,9 +68,9 @@ class HeaderLinks extends React.Component {
           <Hidden mdUp implementation="css">
             <p className={classes.linkText}>Dashboard</p>
           </Hidden>
-        </Button>
+       </Button>
         <div className={classes.manager}>
-          {/*<Button
+          <Button
             buttonRef={node => {
               this.anchorEl = node;
             }}
@@ -89,7 +89,7 @@ class HeaderLinks extends React.Component {
                 Notification
               </p>
             </Hidden>
-          </Button>*/}
+          </Button>
           <Poppers
             open={open}
             anchorEl={this.anchorEl}
@@ -145,25 +145,81 @@ class HeaderLinks extends React.Component {
                       </MenuItem>
                     </MenuList>
                   </ClickAwayListener>
-                </Paper>
+               </Paper>
               </Grow>
             )}
           </Poppers>
-        </div>
+        </div>*/}
         <Button
         
-          color={window.innerWidth > 959 ? "transparent" : "white"}
-          justIcon={window.innerWidth > 959}
-          simple={!(window.innerWidth > 959)}
-          aria-label="Person"
-          className={classes.buttonLink}
-        >
+        buttonRef={node => {
+          this.anchorEl = node;
+        }}
+        color={window.innerWidth > 959 ? "transparent" : "white"}
+        justIcon={window.innerWidth > 959}
+        simple={!(window.innerWidth > 959)}
+        aria-owns={open ? "menu-list-grow" : null}
+        aria-haspopup="true"
+        onClick={this.handleToggle}
+        className={classes.buttonLink}
+          >
           <Person className={classes.icons} />
           <Hidden mdUp implementation="css">
-            <p className={classes.linkText}>Profile</p>
+            <p onClick={this.handleClick} className={classes.linkText}>
+                Profile
+              </p>
           </Hidden>
         </Button>
-      </div>
+        <Poppers
+            open={open}
+            anchorEl={this.anchorEl}
+            transition
+            disablePortal
+            className={
+              classNames({ [classes.popperClose]: !open }) +
+              " " +
+              classes.pooperNav
+            }
+          >
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                id="menu-list-grow"
+                style={{
+                  transformOrigin:
+                    placement === "bottom" ? "center top" : "center bottom"
+                }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={this.handleClose}>
+                    <MenuList role="menu">
+                      <MenuItem
+                       onClick={this.handleClose}
+                       className={classes.dropdownItem}
+                     >
+                        Profile
+                      </MenuItem>
+                      <MenuItem
+                        onClick={this.handleClose}
+                        className={classes.dropdownItem}
+                      >
+                        Settings
+                      </MenuItem>
+                      <MenuItem
+                        onClick={this.handleClose}
+                        className={classes.dropdownItem}
+                      >
+                        Sign out
+                      </MenuItem>
+                    </MenuList>
+                  </ClickAwayListener>
+               </Paper>
+              </Grow>
+            )}
+          </Poppers>
+        
+    
+  </div>
     );
   }
 }
