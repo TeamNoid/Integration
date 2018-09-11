@@ -25,8 +25,9 @@ function Icons(props) {
 
             </p>
           </CardHeader>
-
-          {/*<CardHeader plain color="primary">
+        </Card>
+      </GridItem>
+      {/*<CardHeader plain color="primary">
             <h4 className={classes.cardTitleWhite}>Material Design Icons</h4>
             <p className={classes.cardCategoryWhite}>
               Handcrafted by our friends from{" "}
@@ -67,47 +68,58 @@ function Icons(props) {
             </Hidden>
   </CardBody>*/}
 
+
+
+
+      <GridItem xs={3}>
+        <Card plain >
+          <CardHeader color="warning">
+
+            <h4 className={classes.cardTitleWhite}><br />Facility Check </h4>
+            <p className={classes.cardCategoryWhite}></p>
+            <br />
+          </CardHeader>
+
         </Card>
-        <div>
-          <GridItem xs={3} sm={3} md={3}>
-            <Card plain >
-              <CardHeader color="warning">
-                <h4 className={classes.cardTitleWhite}>Facility Check</h4>
-                <p className={classes.cardCategoryWhite}></p>
-              </CardHeader>
-
-            </Card>
-
-          </GridItem>
-        </div>
-
-        <GridItem xs={3} sm={3} md={3}>
-          <Card plain >
-            <CardHeader color="warning">
-              <h4 className={classes.cardTitleWhite}>Registration</h4>
-            </CardHeader>
-          </Card>
-        </GridItem>
-
-        <GridItem xs={3} sm={3} md={3}>
-          <Card plain >
-            <CardHeader color="warning">
-              <h4 className={classes.cardTitleWhite}>Subscription</h4>
-            </CardHeader>
-          </Card>
-        </GridItem>
-
-        <GridItem xs={3} sm={3} md={3}>
-          <Card plain >
-            <CardHeader color="warning">
-              <h4 className={classes.cardTitleWhite}>Help Desk</h4>
-            </CardHeader>
-          </Card>
-        </GridItem>
 
       </GridItem>
 
-    </GridContainer>
+
+      <GridItem xs={3}>
+        <Card plain >
+          <CardHeader color="warning">
+            <h4 className={classes.cardTitleWhite}><br />Registration</h4>
+            <br />
+          </CardHeader>
+        </Card>
+      </GridItem>
+      <GridItem xs={3}>
+        <Card plain >
+          <CardHeader color="warning">
+            <h4 className={classes.cardTitleWhite}><br />Subscription</h4>
+            <br />
+          </CardHeader>
+        </Card>
+      </GridItem>
+      <GridItem xs={3}>
+        <Card plain >
+          <CardHeader color="warning">
+            <h4 className={classes.cardTitleWhite}><br />Help Desk</h4>
+            <br />
+          </CardHeader>
+        </Card>
+      </GridItem>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>| |</b></p>
+      <GridItem xs={12}>
+        <Card plain >
+          <CardHeader color="warning">
+            <h4 className={classes.cardTitleWhite}><br />Health Information Mediator</h4>
+            <br />
+          </CardHeader>
+        </Card>
+      </GridItem>
+    </GridContainer >
+
   );
 }
 
