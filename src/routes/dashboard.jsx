@@ -77,10 +77,10 @@ const dashboardRoutes = [
   },
   {
     path: "/task3",
-    sidebarName: "Task 3",
-    navbarName: "Task 3",
+    sidebarName: "HCW staffing-HIV Clients",
+    navbarName: "HCW staffing numbers and successful initiation of HIV clients into the ART program",
     icon: "content_paste",
-    component: Icons
+    component: Task3
   },
   {
     path: "/task4",
@@ -91,10 +91,10 @@ const dashboardRoutes = [
   },
   {
     path: "/task5",
-    sidebarName: "Task 5",
-    navbarName: "Task 5",
+    sidebarName: "HCW- training- ARVs",
+    navbarName: "HCW- training- ARVs",
     icon: "content_paste",
-    component: Icons
+    component: Task5
   },
   {
     path: "/task6",
