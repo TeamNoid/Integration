@@ -66,9 +66,9 @@ const dashboardRoutes = [
   {
     path: "/task1",
     sidebarName: "Task 1",
-    navbarName: "Task 1",
+    navbarName: "Is there a correlation between health care worker training &  successful identification and linkage of HIV Positive clients? ",
     icon: "content_paste",
-    component: Icons
+    component: Task1
   },
 
   {
@@ -76,56 +76,56 @@ const dashboardRoutes = [
     sidebarName: "Task 2",
     navbarName: "Task 2",
     icon: "content_paste",
-    component: Icons
+    component: Task2
   },
   {
     path: "/task3",
     sidebarName: "Task 3",
     navbarName: "Task 3",
     icon: "content_paste",
-    component: Icons
+    component: Task3
   },
   {
     path: "/task4",
     sidebarName: "Task 4",
     navbarName: "Task 4",
     icon: "content_paste",
-    component: Icons
+    component: Task4
   },
   {
     path: "/task5",
     sidebarName: "Task 5",
     navbarName: "Task 5",
     icon: "content_paste",
-    component: Icons
+    component: Task5
   },
   {
     path: "/task6",
     sidebarName: "Task 6",
     navbarName: "Task 6",
     icon: "content_paste",
-    component: Icons
+    component: Task6
   },
   {
     path: "/task7",
     sidebarName: "Task 7",
     navbarName: "Task 7",
     icon: "content_paste",
-    component: Icons
+    component: Task7
   },
   {
     path: "/task8",
     sidebarName: "Task 8",
     navbarName: "Task 8",
     icon: "content_paste",
-    component: Icons
+    component: Task8
   },
   {
     path: "/task9",
     sidebarName: "Task 9",
     navbarName: "Task 9",
     icon: "content_paste",
-    component: Icons
+    component: Task9
   },
   {
     path: "/icons",
