@@ -154,7 +154,7 @@ class Dashboard extends React.Component {
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card chart>
-              <CardHeader color="primary">
+              <CardHeader color="danger">
                 <ChartistGraph
                   className="ct-chart"
                   data={completedTasksChart.data}
@@ -164,9 +164,9 @@ class Dashboard extends React.Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Completed Tasks</h4>
+                <h4 className={classes.cardTitle}>Correlation</h4>
                 <p className={classes.cardCategory}>
-                  Last Campaign Performance
+                  Correlation
                 </p>
               </CardBody>
               <CardFooter chart>
