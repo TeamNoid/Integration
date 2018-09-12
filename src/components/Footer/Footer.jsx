@@ -35,13 +35,11 @@ function Footer({ ...props }) {
               </a>
             </ListItem>
           </List>
-        </div>*/}
+  </div>*/}
         <p className={classes.right}>
           <span>
             &copy; {1900 + new Date().getYear()}{" "}
-            <a href="#" className={classes.a}>
-              HealthIT
-            </a>
+            HealthIT
           </span>
         </p>
       </div>
