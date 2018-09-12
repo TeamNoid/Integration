@@ -65,7 +65,7 @@ const dashboardRoutes = [
   },
   {
     path: "/task1",
-    sidebarName: "Task 1",
+    sidebarName: "health care worker training &  successful identification of HIV Positive clients ",
     navbarName: "Is there a correlation between health care worker training &  successful identification and linkage of HIV Positive clients? ",
     icon: "content_paste",
     component: Task1

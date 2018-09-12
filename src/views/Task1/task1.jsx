@@ -90,12 +90,12 @@ class Dashboard extends React.Component {
                                 />
                             </CardHeader>
                             <CardBody>
-                                <h4 className={classes.cardTitle}>Transaction Load per day</h4>
+                                <h4 className={classes.cardTitle}>PLHIV Undergoing ART in 2017</h4>
                                 <p className={classes.cardCategory}>
                                     <span className={classes.successText}>
-                                        <ArrowUpward className={classes.upArrowCardCategory} /> 55%
+                                        <ArrowUpward className={classes.upArrowCardCategory} /> 45%
                   </span>{" "}
-                                    12 Successful Transactions
+                                    Improvement
                 </p>
                             </CardBody>
                             <CardFooter chart>
@@ -120,9 +120,9 @@ class Dashboard extends React.Component {
                                 />
                             </CardHeader>
                             <CardBody>
-                                <h4 className={classes.cardTitle}>Email Subscriptions</h4>
+                                <h4 className={classes.cardTitle}>Health Workers in ABCD County</h4>
                                 <p className={classes.cardCategory}>
-                                    Last Campaign Performance
+                                    2017 Recruitment
                 </p>
                             </CardBody>
                             <CardFooter chart>
@@ -133,7 +133,7 @@ class Dashboard extends React.Component {
                         </Card>
                     </GridItem>
                 </GridContainer>
-                <GridContainer>
+                {/*<GridContainer>
                     <GridItem xs={12} sm={12} md={12}>
                         <Card chart>
                             <CardHeader color="info">
@@ -158,7 +158,7 @@ class Dashboard extends React.Component {
                             </CardFooter>
                         </Card>
                     </GridItem>
-                </GridContainer>
+                </GridContainer>*/}
             </div>
         );
     }
