@@ -11,7 +11,7 @@ import Hidden from "@material-ui/core/Hidden";
 import Poppers from "@material-ui/core/Popper";
 // @material-ui/icons
 import Person from "@material-ui/icons/Person";
-import Notifications from "@material-ui/icons/Notifications";
+//import Notifications from "@material-ui/icons/Notifications";
 import Dashboard from "@material-ui/icons/Dashboard";
 import Search from "@material-ui/icons/Search";
 // core components
@@ -82,11 +82,10 @@ class HeaderLinks extends React.Component {
             onClick={this.handleToggle}
             className={classes.buttonLink}
           >
-            <Notifications className={classes.icons} />
-            <span className={classes.notifications}>5</span>
+            <Person className={classes.icons} />
             <Hidden mdUp implementation="css">
               <p onClick={this.handleClick} className={classes.linkText}>
-                Notification
+                Profile
               </p>
             </Hidden>
           </Button>
@@ -117,31 +116,19 @@ class HeaderLinks extends React.Component {
                         onClick={this.handleClose}
                         className={classes.dropdownItem}
                       >
-                        Mike John responded to your email
+                        Profile
                       </MenuItem>
                       <MenuItem
                         onClick={this.handleClose}
                         className={classes.dropdownItem}
                       >
-                        You have 5 new tasks
+                        Settings
                       </MenuItem>
                       <MenuItem
                         onClick={this.handleClose}
                         className={classes.dropdownItem}
                       >
-                        You're now friend with Andrew
-                      </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Another Notification
-                      </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Another One
+                        Sign Out
                       </MenuItem>
                     </MenuList>
                   </ClickAwayListener>
