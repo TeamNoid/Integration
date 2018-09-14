@@ -88,7 +88,7 @@ const dashboardRoutes = [
   {
     path: "/task4",
     sidebarName: "Task 4",
-    navbarName: " Correlation between health care worker training, and successful initiation of HIV clients into the ART program as per the Test and Treat Guidelines",
+    navbarName: " Correlation between health care worker training, and successful initiation of HIV clients into the ART program",
     icon: "content_paste",
     component: Task4
   },
@@ -116,9 +116,9 @@ const dashboardRoutes = [
   {
     path: "/task8",
     sidebarName: "Task 8",
-    navbarName: "Task 8",
+    navbarName: "Correlation between staffing numbers and reduction of maternal and neonatal deaths caused by HIV related complications",
     icon: "content_paste",
-    component: Icons
+    component: Task8
   },
   {
     path: "/task9",
