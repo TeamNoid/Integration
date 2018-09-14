@@ -1,12 +1,9 @@
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
-// import ContentPaste from "@material-ui/icons/ContentPaste";
-//import LibraryBooks from "@material-ui/icons/LibraryBooks";
+
 import BubbleChart from "@material-ui/icons/BubbleChart";
-//import LocationOn from "@material-ui/icons/LocationOn";
-// Notifications from "@material-ui/icons/Notifications";
-//import Unarchive from "@material-ui/icons/Unarchive";
+
 import Task1 from "views/Task1/task1.jsx";
 import Task2 from "views/Task2/task2.jsx";
 import Task3 from "views/Task3/task3.jsx";
@@ -68,22 +65,22 @@ const dashboardRoutes = [
     sidebarName: "Task 1",
     navbarName: "Task 1",
     icon: "content_paste",
-    component: Icons
+    component: Task1
   },
 
   {
     path: "/task2",
-    sidebarName: "Task 2",
-    navbarName: "Task 2",
+    sidebarName: "Staffing and Identification",
+    navbarName: "Health Care Staffing and Identification of HIV positive clients",
     icon: "content_paste",
-    component: Icons
+    component: Task2
   },
   {
     path: "/task3",
-    sidebarName: "Task 3",
-    navbarName: "Task 3",
+    sidebarName: "HCW staffing-HIV Clients",
+    navbarName: "HCW staffing numbers and successful initiation of HIV clients into the ART program",
     icon: "content_paste",
-    component: Icons
+    component: Task3
   },
   {
     path: "/task4",
@@ -94,17 +91,17 @@ const dashboardRoutes = [
   },
   {
     path: "/task5",
-    sidebarName: "Task 5",
-    navbarName: "Task 5",
+    sidebarName: "HCW- training- ARVs",
+    navbarName: "HCW- training- ARVs",
     icon: "content_paste",
-    component: Icons
+    component: Task5
   },
   {
     path: "/task6",
-    sidebarName: "Task 6",
-    navbarName: "Task 6",
+    sidebarName: "Training and Prescription practices",
+    navbarName: "Health care worker training and adherance to prescription practices",
     icon: "content_paste",
-    component: Icons
+    component: Task6
   },
   {
     path: "/task7",
@@ -122,10 +119,10 @@ const dashboardRoutes = [
   },
   {
     path: "/task9",
-    sidebarName: "Task 9",
-    navbarName: "Task 9",
+    sidebarName: "Training and uptake of FP",
+    navbarName: "Health worker training and an increased uptake of FP among HIV clients",
     icon: "content_paste",
-    component: Icons
+    component: Task9
   },
   {
     path: "/icons",
