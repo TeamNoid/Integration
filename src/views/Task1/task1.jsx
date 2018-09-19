@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import ChartistGraph from "react-chartist";
 // @material-ui/core
 import withStyles from "@material-ui/core/styles/withStyles";
-import Table from "components/TaskTable/tasktable.jsx";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Store from "@material-ui/icons/Store";
@@ -14,7 +13,7 @@ import DateRange from "@material-ui/icons/DateRange";
 // import Update from "@material-ui/icons/Update";
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import AccessTime from "@material-ui/icons/AccessTime";
-
+import Table from "components/TaskTable/tasktable.jsx";
 // import Accessibility from "@material-ui/icons/Accessibility";
 // import BugReport from "@material-ui/icons/BugReport";
 // import Code from "@material-ui/icons/Code";
@@ -61,17 +60,17 @@ class Dashboard extends React.Component {
                     <GridItem xs={12} sm={12} md={12}>
                         <Card>
                             <CardHeader color="info">
-                                <h4 className={classes.cardTitleWhite}>VIRAL LOAD TABLE</h4>
+                                <h4 className={classes.cardTitleWhite}>STAFFING vs IDENTIFICATION AND LINKAGE OF PATIENTS</h4>
                                 <p className={classes.cardCategoryWhite}>
-
-                                </p>
+                                    MALE AND FEMALE PLHIV
+            </p>
                             </CardHeader>
                             <CardBody>
                                 <Table
                                     tableHeaderColor="info"
-                                    tableHead={["CountyName", "HCW Training", "HCW Distribution", "Viral Load Results", "Visit Data, Lab data"]}
+                                    tableHead={["CountyName", "Population Coverage", "HCW Training", "HCW Distribution", "Postivity Actuals", "Positivity targets"]}
                                     tableData={[
-                                        ["######", "######", "######", "######", "######"]
+                                        ["######", "######", "######", "######", "######", "######"]
                                     ]}
                                 />
                             </CardBody>

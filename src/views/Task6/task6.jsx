@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ChartistGraph from "react-chartist";
 // @material-ui/core
 import withStyles from "@material-ui/core/styles/withStyles";
-
+import Table from "components/TaskTable/tasktable.jsx";
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import AccessTime from "@material-ui/icons/AccessTime";
 
@@ -39,6 +39,27 @@ class Dashboard extends React.Component {
     const { classes } = this.props;
     return (
       <div>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="info">
+                <h4 className={classes.cardTitleWhite}>STAFFING vs NEWLY INITIATED ON ART</h4>
+                <p className={classes.cardCategoryWhite}>
+
+                </p>
+              </CardHeader>
+              <CardBody>
+                <Table
+                  tableHeaderColor="info"
+                  tableHead={["CountyName", "HCW Training", "HCW Distribution", "ARV Dispensing data", "Commodity distribution"]}
+                  tableData={[
+                    ["######", "######", "######", "######", "######"]
+                  ]}
+                />
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card chart>
@@ -117,7 +138,7 @@ class Dashboard extends React.Component {
             </Card>
           </GridItem>
         </GridContainer>
-      </div>
+      </div >
     );
   }
 }

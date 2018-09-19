@@ -7,7 +7,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import AccessTime from "@material-ui/icons/AccessTime";
-
+import Table from "components/TaskTable/tasktable.jsx";
 // core components
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -39,6 +39,27 @@ class Dashboard extends React.Component {
     const { classes } = this.props;
     return (
       <div>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="info">
+                <h4 className={classes.cardTitleWhite}>STAFFING vs UPTAKE OF FAMILY PLANNING</h4>
+                <p className={classes.cardCategoryWhite}>
+
+                </p>
+              </CardHeader>
+              <CardBody>
+                <Table
+                  tableHeaderColor="info"
+                  tableHead={["CountyName", "HCW Training", "HCW Distribution", "FP Uptake Data"]}
+                  tableData={[
+                    ["######", "######", "######", "######"]
+                  ]}
+                />
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card chart>

@@ -25,6 +25,7 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 // import CustomTabs from "components/CustomTabs/CustomTabs.jsx";
 import Danger from "components/Typography/Danger.jsx";
 import Card from "components/Card/Card.jsx";
+import Table from "components/TaskTable/tasktable.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardIcon from "components/Card/CardIcon.jsx";
 import CardBody from "components/Card/CardBody.jsx";
@@ -55,6 +56,27 @@ class Dashboard extends React.Component {
     const { classes } = this.props;
     return (
       <div>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="info">
+                <h4 className={classes.cardTitleWhite}>STAFFING vs NEWLY INITIATED ON ART</h4>
+                <p className={classes.cardCategoryWhite}>
+
+                </p>
+              </CardHeader>
+              <CardBody>
+                <Table
+                  tableHeaderColor="info"
+                  tableHead={["CountyName", "HCW Training", "HCW Distribution", "ARV Dispensing data", "Commodity distribution"]}
+                  tableData={[
+                    ["######", "######", "######", "######", "######"]
+                  ]}
+                />
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
         {/* <GridContainer>
           <GridItem xs={12} sm={6} md={3}>
             <Card>
@@ -113,7 +135,7 @@ class Dashboard extends React.Component {
                   <span className={classes.successText}>
                     <ArrowUpward className={classes.upArrowCardCategory} />
                   </span>{" "}
-                
+
                 </p>
               </CardBody>
               <CardFooter chart>

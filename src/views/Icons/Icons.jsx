@@ -109,7 +109,6 @@ function Icons(props) {
           </CardHeader>
         </Card>
       </GridItem>
-      <p><b>| |</b></p>
       <GridItem xs={12}>
         <Card plain >
           <CardHeader color="warning">

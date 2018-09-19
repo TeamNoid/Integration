@@ -60,14 +60,8 @@ const dashboardRoutes = [
     icon: Person,
     component: NotificationsPage
   },
-  {
-    path: "/task1",
-    sidebarName: "Task 1",
-    navbarName: "Task 1",
-    icon: "content_paste",
-    component: Task1
-  },
 
+<<<<<<< HEAD
   {
     path: "/task2",
     sidebarName: "Staffing and Identification",
@@ -131,6 +125,13 @@ const dashboardRoutes = [
     icon: BubbleChart,
     component: Icons
   },
+=======
+
+
+
+
+
+>>>>>>> ab7b683b69f4f57b2fa86ed985da2a4dfe1dcf15
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];
 
