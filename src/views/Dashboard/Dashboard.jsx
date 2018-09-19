@@ -40,6 +40,7 @@ import {
 
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
 
+import Fetchdata from "components/Fetchdata/Fetchdata";
 class Dashboard extends React.Component {
   state = {
     value: 0
@@ -154,20 +155,9 @@ class Dashboard extends React.Component {
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card chart>
-              <CardHeader color="info">
-                <ChartistGraph
-                  className="ct-chart"
-                  data={completedTasksChart.data}
-                  type="Line"
-                  options={completedTasksChart.options}
-                  listener={completedTasksChart.animation}
-                />
-              </CardHeader>
+              <CardHeader color="info">Facility</CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Completed Tasks</h4>
-                <p className={classes.cardCategory}>
-                  Last Campaign Performance
-                </p>
+                <Fetchdata />
               </CardBody>
               <CardFooter chart>
                 <div className={classes.stats}>

@@ -4,7 +4,7 @@ import Person from "@material-ui/icons/Person";
 
 import BubbleChart from "@material-ui/icons/BubbleChart";
 
-import Task1 from "views/Task1/task1.jsx";
+import Task1 from "views/Task1/task1.js";
 import Task2 from "views/Task2/task2.jsx";
 import Task3 from "views/Task3/task3.jsx";
 import Task4 from "views/Task4/task4.jsx";
