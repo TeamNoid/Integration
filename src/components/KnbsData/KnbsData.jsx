@@ -1,43 +1,48 @@
-//import React, { Component } from "react";
+import React, { Component } from "react";
+import ReactDOM from 'react-dom';
 //import React from 'react';
 //import withStyles from "@material-ui/core/styles/withStyles";
 //import classNames from "classnames";
 //import PropTypes from "prop-types";
 //import { NavLink } from "react-router-dom";
 
-//class KnbsData extends Component {
-  /*constructor(props) {
-      super(props)
-      this.state = {
-          population: [],
-      };
-  }
-  componentDidMount() {
-      fetch('http://kenya.opendataforafrica.org/api/1.0/data/emxkej?time=&uiMode=allData&gender=1000000,1000010&age-group=1000000,1000010,1000020,1000030,1000040,1000050,1000060,1000070,1000080,1000090,1000100,1000110,1000120,1000130,1000140,1000150,1000160&frequencies=A')
-          .then(results => {
-              return results.json();
-          }).then(data => {
-              let population = data.results.map((data) => {
-                  return (
-                      <div key={data.gender}>
-                      </div>
-                  )
-              })
-              this.setState({ population: population.gender });
-              console.log("state", this.state.population);
 
-          })
+
+{/*class KnbsData extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      population: [],
+    };
+  }
+  
+  componentDidMount() {
+    fetch('http://kenya.opendataforafrica.org/api/1.0/data/emxkej?time=&uiMode=allData&gender=1000000,1000010&age-group=1000000,1000010,1000020,1000030,1000040,1000050,1000060,1000070,1000080,1000090,1000100,1000110,1000120,1000130,1000140,1000150,1000160&frequencies=A')
+      .then(results => {
+        return results.json();
+      }).then(data => {
+        console.log("life");
+        let population = data.results.map((data) => {
+          return (
+            <div key={data.gender}>
+            </div>
+          )
+        })
+        this.setState({ population: population.gender });
+        console.log("state", this.state.population);
+
+      })
   }
   render() {
-      return (
-          <div classNames="container1">
-              <div classNames="container2">
-                  {this.state.population}
+    return (
+      <div classNames="container1">
+        <div classNames="container2">
+          {this.state.population}
 
-              </div>
-          </div>
+        </div>
+      </div>
 
-      )
+    )
   }
 }
 
@@ -73,7 +78,6 @@ render() {
       <div>
     </div>
   )
-}*/
-//}
 
-//export default KnbsData;
+
+export default KnbsData;*/}

@@ -60,7 +60,7 @@ class Dashboard extends React.Component {
                     <GridItem xs={12} sm={12} md={12}>
                         <Card>
                             <CardHeader color="info">
-                                <h4 className={classes.cardTitleWhite}>PLHIV TABLE</h4>
+                                <h4 className={classes.cardTitleWhite}>STAFFING vs IDENTIFICATION AND LINKAGE OF PATIENTS</h4>
                                 <p className={classes.cardCategoryWhite}>
                                     MALE AND FEMALE PLHIV
             </p>
@@ -68,7 +68,7 @@ class Dashboard extends React.Component {
                             <CardBody>
                                 <Table
                                     tableHeaderColor="info"
-                                    tableHead={["#", "POPULATION", "TESTED +VE", "UNDERGOING ART", "LOW VIRAL LOAD", "COMPARISON TO TARGET"]}
+                                    tableHead={["CountyName", "Population Coverage", "HCW Training", "HCW Distribution", "Postivity Actuals", "Positivity targets"]}
                                     tableData={[
                                         ["######", "######", "######", "######", "######", "######"]
                                     ]}

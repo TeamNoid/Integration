@@ -18,7 +18,9 @@ import AccessTime from "@material-ui/icons/AccessTime";
 // import Code from "@material-ui/icons/Code";
 // import Cloud from "@material-ui/icons/Cloud";
 // core components
-import KnbsData from "components/KnbsData/KnbsData.jsx";
+import Button from "components/CustomButtons/Button.jsx";
+import buttonStyle from "assets/jss/material-dashboard-react/components/buttonStyle.jsx";
+//import KnbsData from "components/KnbsData/KnbsData.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 // import Table from "components/Table/Table.jsx";
@@ -34,33 +36,32 @@ import CardFooter from "components/Card/CardFooter.jsx";
 //import { bugs, website, server } from "variables/general";
 
 import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
+    dailySalesChart,
+    emailsSubscriptionChart,
+    completedTasksChart
 } from "variables/charts";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
 
 class Dashboard extends React.Component {
-  state = {
-    value: 0
-  };
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
+    state = {
+        value: 0
+    };
+    handleChange = (event, value) => {
+        this.setState({ value });
+    };
 
-  handleChangeIndex = index => {
-    this.setState({ value: index });
-  };
+    handleChangeIndex = index => {
+        this.setState({ value: index });
+    };
 
-  render() {
-    const { classes } = this.props;
-    return (
-      <KnbsData />),
-      (
-        <div>
-          <GridContainer>
-            <GridItem xs={12} sm={6} md={3}>
+    render() {
+        const { classes } = this.props;
+        return (
+
+            <div>
+                <GridContainer>
+                    {/*<GridItem xs={12} sm={6} md={3}>
               <Card>
                 <CardHeader color="danger" stats icon>
                   <CardIcon color="danger">
@@ -98,36 +99,37 @@ class Dashboard extends React.Component {
                 </CardFooter>
               </Card>
             </GridItem>
-          </GridContainer>
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={12}>
-              <Card chart>
-                <CardHeader color="info">
-                  <ChartistGraph
-                    className="ct-chart"
-                    data={dailySalesChart.data}
-                    type="Line"
-                    options={dailySalesChart.options}
-                    listener={dailySalesChart.animation}
-                  />
-                </CardHeader>
-                <CardBody>
-                  <h4 className={classes.cardTitle}>Transaction Load per day</h4>
-                  <p className={classes.cardCategory}>
-                    <span className={classes.successText}>
-                      <ArrowUpward className={classes.upArrowCardCategory} /> 55%
+            </GridContainer>*/}
+                    <GridContainer>
+                        <GridItem xs={12} sm={12} md={12}>
+                            <Card chart>
+                                <CardHeader color="info">
+                                    <ChartistGraph
+                                        className="ct-chart"
+                                        data={dailySalesChart.data}
+                                        type="Bar"
+                                        options={dailySalesChart.options}
+                                        listener={dailySalesChart.animation}
+                                    />
+                                </CardHeader>
+                                <CardBody>
+                                    <h4 className={classes.cardTitle}>Transaction Load per day</h4>
+                                    <p className={classes.cardCategory}>
+                                        <span className={classes.successText}>
+                                            <ArrowUpward className={classes.upArrowCardCategory} /> 55%
                   </span>{" "}
-                    12 Successful Transactions
+                                        12 Successful Transactions
                 </p>
-                </CardBody>
-                <CardFooter chart>
-                  <div className={classes.stats}>
-                    <AccessTime /> updated 4 minutes ago
+                                </CardBody>
+                                <CardFooter chart>
+                                    <div className={classes.stats}>
+                                        <AccessTime /> updated 4 minutes ago
                 </div>
-                </CardFooter>
-              </Card>
-            </GridItem>
-          </GridContainer>
+                                </CardFooter>
+                            </Card>
+                        </GridItem>
+                    </GridContainer>
+                    {/*
           <GridContainer>
             <GridItem xs={12} sm={12} md={12}>
               <Card chart>
@@ -179,17 +181,34 @@ class Dashboard extends React.Component {
                 </div>
                 </CardFooter>
               </Card>
-            </GridItem>
-          </GridContainer>
-        </div>
+            </GridItem>*/}
+                    <GridItem xs={12} sm={6} md={6}>
+                        <Card>
+                            <CardHeader color="danger" stats icon>
 
-      );
+                                <p className={classes.cardCategory}><br /><br /></p>
 
-  }
+                            </CardHeader>
+                            <CardBody >
+                                <Button color="warning">
+                                    Upload CSV File...
+                                    </Button>
+
+                            </CardBody>
+
+                        </Card>
+                    </GridItem>
+
+                </GridContainer>
+            </div>
+
+        );
+
+    }
 }
 
 Dashboard.propTypes = {
-  classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired
 };
 
 export default withStyles(dashboardStyle)(Dashboard);

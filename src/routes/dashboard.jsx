@@ -60,77 +60,12 @@ const dashboardRoutes = [
     icon: Person,
     component: NotificationsPage
   },
-  {
-    path: "/task1",
-    sidebarName: "HCW Training & identification of PLHIV ",
-    navbarName: "Is there a correlation between health care worker training &  successful identification and linkage of HIV Positive clients? ",
-    icon: "content_paste",
-    component: Task1
-  },
 
-  {
-    path: "/task2",
-    sidebarName: "Staffing and Identification",
-    navbarName: "Health Care Staffing and Identification of HIV positive clients",
-    icon: "content_paste",
-    component: Task2
-  },
-  {
-    path: "/task3",
-    sidebarName: "HCW staffing-HIV Clients",
-    navbarName: "HCW staffing numbers and successful initiation of HIV clients into the ART program",
-    icon: "content_paste",
-    component: Task3
-  },
-  {
-    path: "/task4",
-    sidebarName: "Task 4",
-    navbarName: " Correlation between health care worker training, and successful initiation of HIV clients into the ART program as per the Test and Treat Guidelines",
-    icon: "content_paste",
-    component: Task4
-  },
-  {
-    path: "/task5",
-    sidebarName: "HCW- training- ARVs",
-    navbarName: "HCW- training- ARVs",
-    icon: "content_paste",
-    component: Task5
-  },
-  {
-    path: "/task6",
-    sidebarName: "Training and Prescription practices",
-    navbarName: "Health care worker training and adherance to prescription practices",
-    icon: "content_paste",
-    component: Task6
-  },
-  {
-    path: "/task7",
-    sidebarName: "Task 7",
-    navbarName: "Task 7",
-    icon: "content_paste",
-    component: Task7
-  },
-  {
-    path: "/task8",
-    sidebarName: "Task 8",
-    navbarName: "Task 8",
-    icon: "content_paste",
-    component: Task8
-  },
-  {
-    path: "/task9",
-    sidebarName: "Training and uptake of FP",
-    navbarName: "Health worker training and an increased uptake of FP among HIV clients",
-    icon: "content_paste",
-    component: Task9
-  },
-  {
-    path: "/icons",
-    sidebarName: "Visualizer",
-    navbarName: "Visualizer",
-    icon: BubbleChart,
-    component: Icons
-  },
+
+
+
+
+
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];
 
