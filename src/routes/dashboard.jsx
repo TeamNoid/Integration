@@ -4,15 +4,8 @@ import Person from "@material-ui/icons/Person";
 
 import BubbleChart from "@material-ui/icons/BubbleChart";
 
-import Task1 from "views/Task1/task1.jsx";
-import Task2 from "views/Task2/task2.jsx";
-import Task3 from "views/Task3/task3.jsx";
-import Task4 from "views/Task4/task4.jsx";
-import Task5 from "views/Task5/task5.jsx";
-import Task6 from "views/Task6/task6.jsx";
-import Task7 from "views/Task7/task7.jsx";
-import Task8 from "views/Task8/task8.jsx";
-import Task9 from "views/Task9/task9.jsx";
+
+
 // core components/views
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 //import UserProfile from "views/UserProfile/UserProfile.jsx";
@@ -46,13 +39,13 @@ const dashboardRoutes = [
     icon: "book",
     component: Auditlogs
   },
-  {
+  /*{
     path: "/icons",
     sidebarName: "Visualizer",
     navbarName: "Visualizer",
     icon: BubbleChart,
     component: Icons
-  },
+  },*/
   {
     path: "/notifications",
     sidebarName: "Users",

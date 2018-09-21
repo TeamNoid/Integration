@@ -35,7 +35,7 @@ const healthWorkerTraining = {
   },
 
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {

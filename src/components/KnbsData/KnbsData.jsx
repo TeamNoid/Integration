@@ -15,13 +15,13 @@ import ReactDOM from 'react-dom';
       population: [],
     };
   }
-  
+
   componentDidMount() {
     fetch('http://kenya.opendataforafrica.org/api/1.0/data/emxkej?time=&uiMode=allData&gender=1000000,1000010&age-group=1000000,1000010,1000020,1000030,1000040,1000050,1000060,1000070,1000080,1000090,1000100,1000110,1000120,1000130,1000140,1000150,1000160&frequencies=A')
       .then(results => {
         return results.json();
       }).then(data => {
-        console.log("life");
+        console.log(data);
         let population = data.results.map((data) => {
           return (
             <div key={data.gender}>
@@ -77,7 +77,7 @@ render() {
         })}
       <div>
     </div>
-  )
+      )
 
 
 export default KnbsData;*/}

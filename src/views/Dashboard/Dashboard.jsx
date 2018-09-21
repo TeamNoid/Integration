@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
+import classNames from "classnames";
 // @material-ui/core
+
 import withStyles from "@material-ui/core/styles/withStyles";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
@@ -21,8 +23,11 @@ import AccessTime from "@material-ui/icons/AccessTime";
 import Button from "components/CustomButtons/Button.jsx";
 import buttonStyle from "assets/jss/material-dashboard-react/components/buttonStyle.jsx";
 //import KnbsData from "components/KnbsData/KnbsData.jsx";
+
+
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
+import ListItem from '@material-ui/core/ListItem';
 // import Table from "components/Table/Table.jsx";
 // import Tasks from "components/Tasks/Tasks.jsx";
 // import CustomTabs from "components/CustomTabs/CustomTabs.jsx";
@@ -32,7 +37,9 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardIcon from "components/Card/CardIcon.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-
+import FileUpload from "components/FileUpload/FileUpload.jsx";
+import FromSystem from "components/RadioControl/FromSystem.jsx";
+import ToSystem from "components/RadioControl/ToSystem.jsx";
 //import { bugs, website, server } from "variables/general";
 
 import {
@@ -42,6 +49,11 @@ import {
 } from "variables/charts";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
+import KnbsData from "../../components/KnbsData/KnbsData";
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import { Checkbox } from "@material-ui/core";
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
 
 class Dashboard extends React.Component {
     state = {
@@ -61,146 +73,101 @@ class Dashboard extends React.Component {
 
             <div>
                 <GridContainer>
-                    {/*<GridItem xs={12} sm={6} md={3}>
-              <Card>
-                <CardHeader color="danger" stats icon>
-                  <CardIcon color="danger">
-                    <Icon>content_copy</Icon>
-                  </CardIcon>
-                  <p className={classes.cardCategory}>Failed Transactions</p>
-                  <h3 className={classes.cardTitle}>50</h3>
-                </CardHeader>
-                <CardFooter stats>
-                  <div className={classes.stats}>
-                    <Danger>
-                      <Warning />
-                    </Danger>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      Resolve Issues
-                  </a>
-                  </div>
-                </CardFooter>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={6} md={3}>
-              <Card>
-                <CardHeader color="success" stats icon>
-                  <CardIcon color="success">
-                    <Store />
-                  </CardIcon>
-                  <p className={classes.cardCategory}>Successful Transactions</p>
-                  <h3 className={classes.cardTitle}>245</h3>
-                </CardHeader>
-                <CardFooter stats>
-                  <div className={classes.stats}>
-                    <DateRange />
-                    Last 24 Hours
-                </div>
-                </CardFooter>
-              </Card>
-            </GridItem>
-            </GridContainer>*/}
-                    <GridContainer>
-                        <GridItem xs={12} sm={12} md={12}>
-                            <Card chart>
-                                <CardHeader color="info">
-                                    <ChartistGraph
-                                        className="ct-chart"
-                                        data={dailySalesChart.data}
-                                        type="Bar"
-                                        options={dailySalesChart.options}
-                                        listener={dailySalesChart.animation}
-                                    />
-                                </CardHeader>
-                                <CardBody>
-                                    <h4 className={classes.cardTitle}>Transaction Load per day</h4>
-                                    <p className={classes.cardCategory}>
-                                        <span className={classes.successText}>
-                                            <ArrowUpward className={classes.upArrowCardCategory} /> 55%
-                  </span>{" "}
-                                        12 Successful Transactions
-                </p>
-                                </CardBody>
-                                <CardFooter chart>
-                                    <div className={classes.stats}>
-                                        <AccessTime /> updated 4 minutes ago
-                </div>
-                                </CardFooter>
-                            </Card>
-                        </GridItem>
-                    </GridContainer>
-                    {/*
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={12}>
-              <Card chart>
-                <CardHeader color="info">
-                  <ChartistGraph
-                    className="ct-chart"
-                    data={emailsSubscriptionChart.data}
-                    type="Bar"
-                    options={emailsSubscriptionChart.options}
-                    responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-                    listener={emailsSubscriptionChart.animation}
-                  />
-                </CardHeader>
-                <CardBody>
-                  <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-                  <p className={classes.cardCategory}>
-                    Last Campaign Performance
-                </p>
-                </CardBody>
-                <CardFooter chart>
-                  <div className={classes.stats}>
-                    <AccessTime /> campaign sent 2 days ago
-                </div>
-                </CardFooter>
-              </Card>
-            </GridItem>
-          </GridContainer>
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={12}>
-              <Card chart>
-                <CardHeader color="info">
-                  <ChartistGraph
-                    className="ct-chart"
-                    data={completedTasksChart.data}
-                    type="Line"
-                    options={completedTasksChart.options}
-                    listener={completedTasksChart.animation}
-                  />
-                </CardHeader>
-                <CardBody>
-                  <h4 className={classes.cardTitle}>Completed Tasks</h4>
-                  <p className={classes.cardCategory}>
-                    Last Campaign Performance
-                </p>
-                </CardBody>
-                <CardFooter chart>
-                  <div className={classes.stats}>
-                    <AccessTime /> campaign sent 2 days ago
-                </div>
-                </CardFooter>
-              </Card>
-            </GridItem>*/}
+                    <GridItem xs={12} sm={3} md={3}>
+
+                        <Card>
+                            <CardHeader color="info">
+                                <h4 className={classes.cardTitleWhite}>From:</h4>
+                                <p className={classes.cardCategoryWhite}>
+
+                                </p>
+                            </CardHeader>
+                            <CardBody>
+                                <FromSystem />
+                            </CardBody>
+                        </Card>
+                    </GridItem>
+                    <GridItem xs={12} sm={3} md={3}>
+
+                        <Card>
+                            <CardHeader color="info">
+                                <h4 className={classes.cardTitleWhite}>To</h4>
+                                <p className={classes.cardCategoryWhite}>
+
+                                </p>
+                            </CardHeader>
+                            <CardBody>
+                                <ToSystem />
+                            </CardBody>
+                        </Card>
+                    </GridItem>
+                </GridContainer>
+                <GridContainer>
+                    <GridItem xs={12} sm={3} md={3}>
+
+                        <Card>
+                            <CardHeader color="info">
+                                <h4 className={classes.cardTitleWhite}>Source Elements</h4>
+                                <p className={classes.cardCategoryWhite}>
+
+                                </p>
+                            </CardHeader>
+                            <CardBody>
+                                <ListItem>
+                                    iHRIS Clinical Officer
+                                </ListItem>
+                                <ListItem>
+                                    iHRIS Clinical Officer
+                                </ListItem>
+                                <ListItem>
+                                    iHRIS Clinical Officer
+                                </ListItem>
+
+                            </CardBody>
+                        </Card>
+                    </GridItem>
+                    <p><br /><br /><br /><br /><br /><br /><b>MAPS TO</b><br /><br /></p>
+                    <GridItem xs={12} sm={3} md={3}>
+                        <Card>
+                            <CardHeader color="info">
+                                <h4 className={classes.cardTitleWhite}>Destination Elements</h4>
+                                <p className={classes.cardCategoryWhite}>
+
+                                </p>
+                            </CardHeader>
+                            <CardBody>
+                                <ListItem>
+                                    CLinical Office
+                                </ListItem>
+                                <ListItem>
+                                    Clinical officer
+                                </ListItem>
+                                <ListItem>
+                                    Clinical Officer
+                                </ListItem>
+                            </CardBody>
+                        </Card>
+                    </GridItem>
+                </GridContainer>
+                <GridContainer>
                     <GridItem xs={12} sm={6} md={6}>
                         <Card>
                             <CardHeader color="danger" stats icon>
-
-                                <p className={classes.cardCategory}><br /><br /></p>
-
+                                <p className={classes.cardCategory}>Upload CSV File<br /></p>
                             </CardHeader>
+                            <FileUpload />
                             <CardBody >
-                                <Button color="warning">
-                                    Upload CSV File...
-                                    </Button>
-
+                                {/* <Button color="warning">
+                                    Upload File...
+                                    </Button>*/}
                             </CardBody>
 
                         </Card>
+
                     </GridItem>
 
                 </GridContainer>
-            </div>
+            </div >
 
         );
 
