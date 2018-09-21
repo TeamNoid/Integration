@@ -35,7 +35,7 @@ const healthWorkerTraining = {
   },
 
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
@@ -66,8 +66,8 @@ const healthWorkerTraining = {
 };
 const dailySalesChart = {
   data: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    series: [[12, 17, 7, 17, 23, 18, 38]]
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    series: [[12, 17, 15, 19, 23, 27, 28, 25, 27, 30, 31, 34]]
   },
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({
@@ -84,7 +84,7 @@ const dailySalesChart = {
   },
   // for animation
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
@@ -125,7 +125,7 @@ const emailsSubscriptionChart = {
       "Feb",
       "Mar",
       "Apr",
-      "Mai",
+      "May",
       "Jun",
       "Jul",
       "Aug",
@@ -134,7 +134,7 @@ const emailsSubscriptionChart = {
       "Nov",
       "Dec"
     ],
-    series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]]
+    series: [[442, 543, 420, 680, 753, 790, 800, 830, 790, 800, 821, 857]]
   },
   options: {
     axisX: {
@@ -155,7 +155,7 @@ const emailsSubscriptionChart = {
       {
         seriesBarDistance: 5,
         axisX: {
-          labelInterpolationFnc: function(value) {
+          labelInterpolationFnc: function (value) {
             return value[0];
           }
         }
@@ -163,7 +163,7 @@ const emailsSubscriptionChart = {
     ]
   ],
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "bar") {
         data.element.animate({
           opacity: {
@@ -202,7 +202,7 @@ const completedTasksChart = {
     }
   },
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
