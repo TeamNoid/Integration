@@ -12,7 +12,7 @@ import Poppers from "@material-ui/core/Popper";
 // @material-ui/icons
 import Person from "@material-ui/icons/Person";
 //import Notifications from "@material-ui/icons/Notifications";
-import Dashboard from "@material-ui/icons/Dashboard";
+
 import Search from "@material-ui/icons/Search";
 // core components
 import CustomInput from "components/CustomInput/CustomInput.jsx";
@@ -57,156 +57,73 @@ class HeaderLinks extends React.Component {
             <Search />
           </Button>
         </div>
-       {/* <Button
+        <Button
+          buttonRef={node => {
+            this.anchorEl = node;
+          }}
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
-          aria-label="Dashboard"
+          aria-owns={open ? "menu-list-grow" : null}
+          aria-haspopup="true"
+          onClick={this.handleToggle}
           className={classes.buttonLink}
         >
-          <Dashboard className={classes.icons} />
-          <Hidden mdUp implementation="css">
-            <p className={classes.linkText}>Dashboard</p>
-          </Hidden>
-       </Button>
-        <div className={classes.manager}>
-          <Button
-            buttonRef={node => {
-              this.anchorEl = node;
-            }}
-            color={window.innerWidth > 959 ? "transparent" : "white"}
-            justIcon={window.innerWidth > 959}
-            simple={!(window.innerWidth > 959)}
-            aria-owns={open ? "menu-list-grow" : null}
-            aria-haspopup="true"
-            onClick={this.handleToggle}
-            className={classes.buttonLink}
-          >
-            <Person className={classes.icons} />
-            <Hidden mdUp implementation="css">
-              <p onClick={this.handleClick} className={classes.linkText}>
-                Profile
-              </p>
-            </Hidden>
-          </Button>
-          <Poppers
-            open={open}
-            anchorEl={this.anchorEl}
-            transition
-            disablePortal
-            className={
-              classNames({ [classes.popperClose]: !open }) +
-              " " +
-              classes.pooperNav
-            }
-          >
-            {({ TransitionProps, placement }) => (
-              <Grow
-                {...TransitionProps}
-                id="menu-list-grow"
-                style={{
-                  transformOrigin:
-                    placement === "bottom" ? "center top" : "center bottom"
-                }}
-              >
-                <Paper>
-                  <ClickAwayListener onClickAway={this.handleClose}>
-                    <MenuList role="menu">
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Profile
-                      </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Settings
-                      </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Sign Out
-                      </MenuItem>
-                    </MenuList>
-                  </ClickAwayListener>
-               </Paper>
-              </Grow>
-            )}
-          </Poppers>
-        </div>*/}
-        <Button
-        
-        buttonRef={node => {
-          this.anchorEl = node;
-        }}
-        color={window.innerWidth > 959 ? "transparent" : "white"}
-        justIcon={window.innerWidth > 959}
-        simple={!(window.innerWidth > 959)}
-        aria-owns={open ? "menu-list-grow" : null}
-        aria-haspopup="true"
-        onClick={this.handleToggle}
-        className={classes.buttonLink}
-          >
           <Person className={classes.icons} />
           <Hidden mdUp implementation="css">
             <p onClick={this.handleClick} className={classes.linkText}>
-                Profile
-              </p>
+              Profile
+            </p>
           </Hidden>
         </Button>
         <Poppers
-            open={open}
-            anchorEl={this.anchorEl}
-            transition
-            disablePortal
-            className={
-              classNames({ [classes.popperClose]: !open }) +
-              " " +
-              classes.pooperNav
-            }
-          >
-            {({ TransitionProps, placement }) => (
-              <Grow
-                {...TransitionProps}
-                id="menu-list-grow"
-                style={{
-                  transformOrigin:
-                    placement === "bottom" ? "center top" : "center bottom"
-                }}
-              >
-                <Paper>
-                  <ClickAwayListener onClickAway={this.handleClose}>
-                    <MenuList role="menu">
-                      <MenuItem
-                       onClick={this.handleClose}
-                       className={classes.dropdownItem}
-                     >
-                        Profile
-                      </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Settings
-                      </MenuItem>
-                      <MenuItem
-                        onClick={this.handleClose}
-                        className={classes.dropdownItem}
-                      >
-                        Sign out
-                      </MenuItem>
-                    </MenuList>
-                  </ClickAwayListener>
-               </Paper>
-              </Grow>
-            )}
-          </Poppers>
-        
-    
-  </div>
+          open={open}
+          anchorEl={this.anchorEl}
+          transition
+          disablePortal
+          className={
+            classNames({ [classes.popperClose]: !open }) +
+            " " +
+            classes.pooperNav
+          }
+        >
+          {({ TransitionProps, placement }) => (
+            <Grow
+              {...TransitionProps}
+              id="menu-list-grow"
+              style={{
+                transformOrigin:
+                  placement === "bottom" ? "center top" : "center bottom"
+              }}
+            >
+              <Paper>
+                <ClickAwayListener onClickAway={this.handleClose}>
+                  <MenuList role="menu">
+                    <MenuItem
+                      onClick={this.handleClose}
+                      className={classes.dropdownItem}
+                    >
+                      Profile
+                    </MenuItem>
+                    <MenuItem
+                      onClick={this.handleClose}
+                      className={classes.dropdownItem}
+                    >
+                      Settings
+                    </MenuItem>
+                    <MenuItem
+                      onClick={this.handleClose}
+                      className={classes.dropdownItem}
+                    >
+                      Sign out
+                    </MenuItem>
+                  </MenuList>
+                </ClickAwayListener>
+              </Paper>
+            </Grow>
+          )}
+        </Poppers>
+      </div>
     );
   }
 }

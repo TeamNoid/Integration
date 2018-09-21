@@ -12,7 +12,7 @@ class Fetchdata extends Component {
   searchCounties(query) {
     var headers = {
       headers: {
-        Authorization: "Bearer jqWKNc6jYfJOZHBVkQOI0Z9AYbfSIN"
+        Authorization: "Bearer fRPNu1UtVO9nUQqD3bMBUlHibS8JSa"
       }
     };
 

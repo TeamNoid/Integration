@@ -1,5 +1,5 @@
 // ##############################
-// // // Tasks for TasksCard - see Dashboard view
+// // // s for sCard - see Dashboard view
 // #############################
 
 var bugs = [

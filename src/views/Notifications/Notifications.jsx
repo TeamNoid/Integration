@@ -2,26 +2,15 @@
 import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
-// @material-ui/icons
-import AddAlert from "@material-ui/icons/AddAlert";
-import Icon from "@material-ui/core/Icon";
-import People from "@material-ui/core/Icon"
-import Warning from "@material-ui/icons/Warning";
+
 // core components
 import Table from "components/Table/Table.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import SnackbarContent from "components/Snackbar/SnackbarContent.jsx";
-import Snackbar from "components/Snackbar/Snackbar.jsx";
+
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
-import CardIcon from "components/Card/CardIcon.jsx";
-import Danger from "components/Typography/Danger.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
-
 
 const styles = {
   cardCategoryWhite: {
@@ -80,7 +69,7 @@ class Notifications extends React.Component {
     this.setState(x);
     this.clearAlertTimeout();
     this.alertTimeout = setTimeout(
-      function () {
+      function() {
         x[place] = false;
         this.setState(x);
       }.bind(this),
@@ -100,7 +89,9 @@ class Notifications extends React.Component {
               <CardBody>
                 <h4 className={classes.cardTitle}>Users</h4>
                 <p className={classes.cardCategory}>
-                  View users and a summary of their channel permissions as well as manage a users groups. Channel Permissions can be altered in each channels configuration
+                  View users and a summary of their channel permissions as well
+                  as manage a users groups. Channel Permissions can be altered
+                  in each channels configuration
                 </p>
               </CardBody>
             </Card>
@@ -117,13 +108,13 @@ class Notifications extends React.Component {
                   <li>Allowed to Rerun Transactions</li>
                 </ul>
                 <Table
-              tableHeaderColor="primary"
-              tableHead={["#", "Email", "Name", "Permission Groups",""]}
-              tableData={[
-                ["1", "dhis2@dhis2.com", "Dhis Two", "admin",""],
-                ["2","iHRIS2@dhis2.com", "Ihr Is", "admin", ""]
-              ]}
-            />
+                  tableHeaderColor="primary"
+                  tableHead={["#", "Email", "Name", "Permission Groups", ""]}
+                  tableData={[
+                    ["1", "dhis2@dhis2.com", "Dhis Two", "admin", ""],
+                    ["2", "iHRIS2@dhis2.com", "Ihr Is", "admin", ""]
+                  ]}
+                />
               </CardBody>
             </Card>
           </GridItem>
